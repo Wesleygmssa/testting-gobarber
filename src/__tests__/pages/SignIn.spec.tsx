@@ -54,7 +54,7 @@ describe('SignIn Page', () => {
     });
   });
 
-  it('should not be able to sign in with invalid credentials', async () => {
+  it('não deve ser capaz de fazer login com credenciais inválidas', async () => {
     const { getByPlaceholderText, getByText } = render(<SignIn />);
 
     const emailField = getByPlaceholderText('E-mail');
@@ -67,32 +67,32 @@ describe('SignIn Page', () => {
     fireEvent.click(buttonElement);
 
     await wait(() => {
-      expect(mockedHistoryPush).not.toHaveBeenCalled();
+      expect(mockedHistoryPush).not.toHaveBeenCalled(); // não deve chamar nada.
     });
   });
 
-  it('não deve ser capaz de fazer login com credenciais inválidas', async () => {
-    mockedSignIn.mockImplementation(() => {
-      throw new Error();
-    });
+  // it('deve exibir um erro se o login falhar', async () => {
+  //   mockedSignIn.mockImplementation(() => {
+  //     throw new Error();
+  //   });
 
-    const { getByPlaceholderText, getByText } = render(<SignIn />);
+  //   const { getByPlaceholderText, getByText } = render(<SignIn />);
 
-    const emailField = getByPlaceholderText('E-mail');
-    const passwordField = getByPlaceholderText('Senha');
-    const buttonElement = getByText('Entrar');
+  //   const emailField = getByPlaceholderText('E-mail');
+  //   const passwordField = getByPlaceholderText('Senha');
+  //   const buttonElement = getByText('Entrar');
 
-    fireEvent.change(emailField, { target: { value: 'johndoe@example.com' } });
-    fireEvent.change(passwordField, { target: { value: '123456' } });
+  //   fireEvent.change(emailField, { target: { value: 'johndoe@example.com' } });
+  //   fireEvent.change(passwordField, { target: { value: '123456' } });
 
-    fireEvent.click(buttonElement);
+  //   fireEvent.click(buttonElement);
 
-    await wait(() => {
-      expect(mockedAddToast).toHaveBeenCalledWith(
-        expect.objectContaining({
-          type: 'error',
-        }),
-      );
-    });
-  });
+  //   await wait(() => {
+  //     expect(mockedAddToast).toHaveBeenCalledWith(
+  //       expect.objectContaining({
+  //         type: 'error',
+  //       }),
+  //     );
+  //   });
+  // });
 });
