@@ -46,8 +46,9 @@
 
 Soon
 
+<!--
 To see the **api**, click here: [GoBarber Rest API](https://github.com/EliasGcf/gobarber-api)</br>
-To see the **mobile client**, click here: [GoBarber Mobile](https://github.com/EliasGcf/gobarber-mobile)
+To see the **mobile client**, click here: [GoBarber Mobile](https://github.com/EliasGcf/gobarber-mobile) -->
 
 ## 🚀 Technologies
 
@@ -71,7 +72,7 @@ Technologies that I used to develop this web client
 
 ## 💻 Getting started
 
-### Requirements
+<!-- ### Requirements
 
 - Have this application's [API](https://github.com/EliasGcf/gobarber-api) running
 
@@ -79,7 +80,7 @@ Technologies that I used to develop this web client
 
 ```bash
 $ git clone https://github.com/EliasGcf/gobarber-web.git && cd gobarber-web
-```
+``` -->
 
 **Follow the steps below**
 
@@ -128,4 +129,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with 💜 by Elias Gabriel 👋 [See my linkedin](https://www.linkedin.com/in/eliasgcf/)
+Made with 💜 by Wesley Guerra👋 [See my linkedin](https://www.linkedin.com/in/wesleyguerra09/)
